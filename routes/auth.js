@@ -15,7 +15,7 @@ router.post(
   [
     body("name", "Enter a valid Name").isLength({ min: 3 }),
     body("email", "Enter a valid Email").isEmail(),
-    body("password", "Enter a valid Password").isLength({ min: 5 }),
+    body("password", "Password must be atleast 5 characters").isLength({ min: 5 }),
   ],
   async (req, res) => {
     // res.json(obj);
